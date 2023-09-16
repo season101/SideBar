@@ -9,15 +9,9 @@ const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <AppContext.Provider value={(setIsSidebarOpen, setIsModalOpen)}>
-      <main>
-        <Home />
-      </main>
-      <div className="modal-overlay">
-        <Modal />
-      </div>
-      <aside>
-        <Sidebar />
-      </aside>
+      <Home />
+      <Modal />
+      <Sidebar />
     </AppContext.Provider>
   );
 };
