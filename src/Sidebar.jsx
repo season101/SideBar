@@ -5,7 +5,7 @@ import logo from './logo.svg';
 
 const Sidebar = () => {
   return (
-    <aside className="sidebar">
+    <aside className="sidebar show-sidebar">
       <div className="sidebar-header">
         <img src={logo} alt="logo" className="logo" />
         <button className="close-btn">
@@ -15,7 +15,7 @@ const Sidebar = () => {
       <ul className="links">
         {links.map((link) => {
           return (
-            <li>
+            <li key={link.id}>
               <a href={link.url}>
                 {link.icon}
                 {link.text}
@@ -24,10 +24,10 @@ const Sidebar = () => {
           );
         })}
       </ul>
-      <ul className="social-icons">
+      <ul className="social-links">
         {social.map((socialLink) => {
           return (
-            <li>
+            <li key={socialLink.id}>
               <a href={socialLink.url}>{socialLink.icon}</a>
             </li>
           );
